@@ -1,12 +1,39 @@
+
 h1 {
     color: #ff0000;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     font-family: 18px;
     font-size: 18px;
+    word-spacing: 0.3em;
+}
+
+h2 {
+    color: greenyellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 18px;
 }
 
 P {
     color: #ff0000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
+    word-spacing: 0.3em;
+}
+
+.Navbar {
+    padding: 10px;
+    background-color: #ffff00;
+    border: 2px solid black;
+
+}
+ul {
+
+    float: center;    
+}
+
+li {
+    display: inline-block;
+    margin-right: 30px;
+    text-align: center;
+    color: #ff0000
 }
