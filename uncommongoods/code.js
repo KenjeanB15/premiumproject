@@ -125,9 +125,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let phone = business["phone"]
       let restaurant = document.createElement('li');
       let name = business["name"]
-    // "Macks Rasta Pasta Cafe" + "" ""
+      debugger;
       restaurant.innerHTML = business["name"] + business["rating"]
-      // <li>Macks Rasta Pasta Cafe 9.5/10</li>
+    //   <div>
+    //     <h3 id='name'>Name</h3>
+    //     <span id='open-hours'>hours</span>
+    //     <a target="_blank" href="https://catchrestaurants.com/catchsteaknyc/wp-content/uploads/2019/10/Gluten-Free-Menu-10.21-1.pdf">Download Menu</a>
+    //     <h4 id='menus'>menu</h4>
+    //     <picture>
+    //         <img id="image_url">
+    //     </picture>
+    // </div>
+      restaurant.innerHTML = `
+        <div>
+          <h3>${name}</h3>
+        </div>`
+
       document.getElementById('more-destinations').appendChild(restaurant);
     }
 });
