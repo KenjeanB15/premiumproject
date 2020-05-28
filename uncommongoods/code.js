@@ -125,10 +125,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let phone = business["phone"]
       let restaurant = document.createElement('li');
       let name = business["name"]
+      let address = business["address"]
+      let image = business["img_url"]
+      let hours = business["is_closed"]
     // "Macks Rasta Pasta Cafe" + "" ""
-      restaurant.innerHTML = business["name"] + business["rating"]
+      restaurant.innerHTML = business["name"] + business["rating"];
       // <li>Macks Rasta Pasta Cafe 9.5/10</li>
       document.getElementById('more-destinations').appendChild(restaurant);
+      //restaurant.innerHTML = business["img_url"];
+
+      restaurant.innerHTML = `
+        <div>
+          <picture>
+          <img id="image_url" alt="">
+          </picture>
+          <h1>${name}</h1>
+          <h2>${address}</h2>
+          <h2>${phone}</h2>
+          <h3>${rating}</h3>
+          <h3>${hours}</h3>
+        </div>`
     }
 });
 
