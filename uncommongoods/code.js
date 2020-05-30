@@ -121,27 +121,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const businesses = data.businesses;
     for (i = 0; i < businesses.length; i++) {
       const business = businesses[i]
-      let rating = business["rating"]
-      let phone = business["phone"]
+      let rating = business["rating"];
+      let phone = business["phone"];
       let restaurant = document.createElement('li');
-      let name = business["name"]
-      debugger;
-      restaurant.innerHTML = business["name"] + business["rating"]
-    //   <div>
-    //     <h3 id='name'>Name</h3>
-    //     <span id='open-hours'>hours</span>
-    //     <a target="_blank" href="https://catchrestaurants.com/catchsteaknyc/wp-content/uploads/2019/10/Gluten-Free-Menu-10.21-1.pdf">Download Menu</a>
-    //     <h4 id='menus'>menu</h4>
-    //     <picture>
-    //         <img id="image_url">
-    //     </picture>
-    // </div>
+      let name = business["name"];
+      let address = business["address"]
+      let image = business["image_url"];
+      let isClosed = business["is_closed"];
+    // "Macks Rasta Pasta Cafe" + "" ""
+      restaurant.innerHTML = business["name"] + business["rating"];
+      // <li>Macks Rasta Pasta Cafe 9.5/10</li>
+      document.getElementById('more-destinations').appendChild(restaurant);
+      //restaurant.innerHTML = business["img_url"];
       restaurant.innerHTML = `
         <div>
-          <h3>${name}</h3>
+          <picture>
+          <img id="image_url" alt="" src="${image}">
+          </picture>
+          <h1>${name}</h1>
+          <h2>${address}</h2>
+          <h2>${phone}</h2>
+          <h3>${rating}</h3>
+          <h3>${isClosed}</h3>
         </div>`
-
-      document.getElementById('more-destinations').appendChild(restaurant);
     }
 });
 
